@@ -41,6 +41,7 @@ class _TeladDesignState extends State<TeladDesign> {
               ),
             )
           ],
+          Cartao(Icons.pets, "Teste", "teste", "azul")
         ),
       ),
     );

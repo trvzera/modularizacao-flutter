@@ -3,7 +3,7 @@ import '../main.dart';
 import '../pages/page1.dart';
 
 class Cartao extends StatelessWidget{
-  final String icone ;
+  final IconData icone;
   final String titulo;
   final String descricao;
   final String cor;
@@ -30,7 +30,7 @@ class Cartao extends StatelessWidget{
                 print("Aqui vai mudar o texto da descricao da pagina");
               },
               child: Icon(
-                Icons.pets, // MUDAR O ICONE AQUI 
+                icone, // MUDAR O ICONE AQUI 
                 color: Colors.blue,
                 size: 25
               ),
