@@ -39,9 +39,10 @@ class _TeladDesignState extends State<TeladDesign> {
                 fontWeight: FontWeight.normal,
                 color: cores.primary,
               ),
-            )
+            ),
+            Cartao(Icons.pets, "Teste", "teste")
+        
           ],
-          Cartao(Icons.pets, "Teste", "teste", "azul")
         ),
       ),
     );

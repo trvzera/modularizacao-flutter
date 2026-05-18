@@ -6,9 +6,9 @@ class Cartao extends StatelessWidget{
   final IconData icone;
   final String titulo;
   final String descricao;
-  final String cor;
+  // final String cor;
   
-  const Cartao(this.icone, this.titulo, this.descricao, this.cor, {super.key});
+  const Cartao(this.icone, this.titulo, this.descricao, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -60,5 +60,4 @@ class Cartao extends StatelessWidget{
       ),
     );
   }
-  
 }
