@@ -9,24 +9,27 @@ class TeladDesign extends StatefulWidget {
 
 class _TeladDesignState extends State<TeladDesign> {
   String mensagem = "Você está na página Incial";
+  void mudarTexto(msg) {
+    setState(() {
+      mensagem = msg;
+    });
+  }
   @override
-  Widget build(BuildContext context){
-    final cores = Theme.of(context).colorScheme;
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
           'Meu App de Ícones',
           style: TextStyle(
-            fontSize: 32,
-            fontWeight: FontWeight.bold,
-            color: Colors.white,
-            letterSpacing: 4
-          ),
+              fontSize: 32,
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+              letterSpacing: 4),
         ),
-        backgroundColor: cores.primary,
+        backgroundColor: Colors.black38,
         centerTitle: true,
       ),
-      body: Padding( 
+      body: Padding(
         padding: EdgeInsets.all(16),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -37,11 +40,15 @@ class _TeladDesignState extends State<TeladDesign> {
               style: TextStyle(
                 fontSize: 14,
                 fontWeight: FontWeight.normal,
-                color: cores.primary,
+                color: Color.fromARGB(255, 115, 166, 253),
               ),
             ),
-            Cartao(Icons.pets, "Teste", "teste")
-        
+            Cartao(
+                Icons.person,
+                "Meu Perfil",
+                "Clique no botão para ir perfil",
+                Color.fromARGB(255, 115, 166, 253),
+                const Color.fromARGB(255, 213, 242, 255))
           ],
         ),
       ),

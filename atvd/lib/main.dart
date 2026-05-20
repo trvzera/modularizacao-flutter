@@ -13,10 +13,6 @@ class MeuApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         useMaterial3: true,
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.blueAccent,
-          secondary: Colors.lightBlueAccent,
-        ),
       ),
       home: TeladDesign(),
     );
