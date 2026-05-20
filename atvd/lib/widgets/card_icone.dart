@@ -6,11 +6,12 @@ class Cartao extends StatelessWidget {
   final IconData icone;
   final String titulo;
   final String descricao;
+  final VoidCallback onPressed;
   final Color cor1;
   final Color cor2;
 
   const Cartao(this.icone, this.titulo, this.descricao, this.cor1, this.cor2,
-      {super.key});
+      {super.key, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +37,7 @@ class Cartao extends StatelessWidget {
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8))),
                 onPressed: () {
-                  mudarTexto("Página de perfil");
+                  onPressed;
                 },
                 child: Icon(icone, color: cor2, size: 25)),
             const SizedBox(width: 12),

@@ -9,11 +9,11 @@ class TeladDesign extends StatefulWidget {
 
 class _TeladDesignState extends State<TeladDesign> {
   String mensagem = "Você está na página Incial";
-  void mudarTexto(msg) {
-    setState(() {
-      mensagem = msg;
-    });
+
+  void mudarTexto(String msg) {
+    mensagem = msg;
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,11 +44,17 @@ class _TeladDesignState extends State<TeladDesign> {
               ),
             ),
             Cartao(
-                Icons.person,
-                "Meu Perfil",
-                "Clique no botão para ir perfil",
-                Color.fromARGB(255, 115, 166, 253),
-                const Color.fromARGB(255, 213, 242, 255))
+              Icons.person,
+              "Meu Perfil",
+              "Clique no botão para ir perfil",
+              onPressed: () {
+                setState(() {
+                  mudarTexto("Teste");
+                });
+              },
+              Color.fromARGB(255, 115, 166, 253),
+              const Color.fromARGB(255, 213, 242, 255),
+            )
           ],
         ),
       ),
