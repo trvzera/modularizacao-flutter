@@ -36,9 +36,7 @@ class Cartao extends StatelessWidget {
                     fixedSize: const Size(50, 50),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8))),
-                onPressed: () {
-                  onPressed;
-                },
+                onPressed: onPressed,
                 child: Icon(icone, color: cor2, size: 25)),
             const SizedBox(width: 12),
             Expanded(
