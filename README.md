@@ -1,4 +1,4 @@
-> **EN:** Flutter exercise on code modularization: split `main`, pages, and widgets into separate files. Work in progress; app code is in the `atvd` folder.
+> **EN:** Flutter exercise on code modularization: split `main`, pages (`page1` to `page5`), and widgets into separate files. Built with custom interactive cards.
 >
 > *The rest of this README is in Brazilian Portuguese (pt-BR).*
 
@@ -7,24 +7,25 @@
 
 # Modularização Flutter
 
-Atividade em Flutter para praticar **modularização do código**: separar app, páginas e widgets em arquivos diferentes, em vez de concentrar tudo no `main.dart`.
+Atividade em Flutter desenvolvida para praticar a **modularização de código** e navegação entre telas. O projeto foca em extrair componentes e páginas do arquivo principal, mantendo a estrutura organizada e limpa.
 
 ## Status
 
-**Em desenvolvimento** — a estrutura base já existe, mas o app ainda será evoluído.
+**Finalizado** — funcional com todo o redirecionamento de páginas.
 
 ## Em que consiste
 
-- **`lib/main.dart`** — entrada do app (`MeuApp`, tema, `DevicePreview`).
-- **`lib/pages/page1.dart`** — tela principal (`TeladDesign`).
-- **`lib/widgets/card_icone.dart`** — widget reutilizável `Cartao` (ícone, título, descrição e ação).
+- **`lib/main.dart`** — Ponto de entrada do aplicativo.
+- **`lib/widgets/card_icone.dart`** — Componente reutilizável (`Cartao`) que recebe ícone, título, descrição, cores customizadas e uma ação de clique (`onPressed`).
+- **`lib/pages/page1.dart`** — Tela principal (`TeladDesign`) que gerencia e renderiza os cartões de interesses (Perfil, Séries/Animes, Jogos e Filmes). Cada cartão, ao ser acionado, abre um `showModalBottomSheet` informativo e navega para sua respectiva subtela.
+- **`lib/pages/` (`page2.dart` a `page5.dart`)** — Subtelas de destino para cada categoria mapeada na página inicial.
 
 ## Como executar
 
-O código fica na pasta `atvd`:
+Certifique-se de estar na raiz do projeto onde o ambiente Flutter está configurado:
 
 ```bash
-cd atvd
 flutter pub get
 flutter run
 ```
+<img src=./preview></img>
